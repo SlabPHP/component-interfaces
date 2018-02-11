@@ -1,0 +1,29 @@
+{
+  "name": "slabphp/component-interfaces",
+  "description": "SlabPHP Component Interfaces",
+  "type": "library",
+  "keywords": [],
+  "homepage": "https://www.salernolabs.com/slab",
+  "time": "2018-02-11",
+  "license": "Apache 2.0",
+  "authors": [
+    {
+      "name": "Eric Salerno",
+      "email": "ericsalerno@gmail.com",
+      "homepage": "http://www.ericsalerno.com/",
+      "role": "Architect"
+    }
+  ],
+  "support":{
+    "email": "salernolabs@gmail.com"
+  },
+  "require-dev":{
+  },
+  "autoload": {
+    "psr-4": {
+      "SlabPHP\\Components\\": "src/"
+    }
+  },
+  "require": {
+  }
+}
