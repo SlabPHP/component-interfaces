@@ -2,11 +2,11 @@
 /**
  * SlabPHP Input Interface
  *
- * @package SlabPHP
+ * @package Slab
  * @subpackage Components
  * @author Eric
  */
-namespace SlabPHP\Components;
+namespace Slab\Components;
 
 interface InputManagerInterface
 {

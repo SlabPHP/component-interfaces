@@ -2,11 +2,11 @@
 /**
  * SlabPHP Router Interface
  *
- * @package SlabPHP
+ * @package Slab
  * @subpackage Components
  * @author Eric
  */
-namespace SlabPHP\Components;
+namespace Slab\Components\Router;
 
 interface RouterInterface
 {
