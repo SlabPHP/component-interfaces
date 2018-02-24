@@ -11,21 +11,6 @@ namespace Slab\Components;
 interface DataSourceDriverInterface
 {
     /**
-     * Constructor with provider and options setting
-     *
-     * @param string $provider
-     * @param array $configuration
-     */
-    public function __construct($provider, $configuration);
-
-    /**
-     * Returns if the database is initialized as a specific type
-     *
-     * @param string $type
-     */
-    public function isInitializedAs($type = null);
-
-    /**
      * Run an SQL query
      *
      * @param string $sql
