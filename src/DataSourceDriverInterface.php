@@ -51,10 +51,11 @@ interface DataSourceDriverInterface
      *
      * @param string $table
      * @param string $where
+     * @param string $whereValue
      *
      * @return mixed
      */
-    public function delete($table, $where);
+    public function delete($table, $where, $whereValue);
 
     /**
      * Update data
