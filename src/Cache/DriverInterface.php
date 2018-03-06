@@ -11,11 +11,10 @@ namespace Slab\Components\Cache;
 interface DriverInterface
 {
     /**
-     * Constructor stores a provider instance
-     *
-     * @param string $provider
+     * @param ProviderInterface $provider
+     * @return $this
      */
-    public function __construct($provider);
+    public function setProvider(ProviderInterface $provider);
 
     /**
      * Retrieve data from memcache
