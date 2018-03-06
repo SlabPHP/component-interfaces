@@ -11,15 +11,32 @@ namespace Slab\Components;
 interface ConfigurationManagerInterface
 {
     /**
-     * Build the standard site configuration object
+     * @param \Psr\Log\LoggerInterface $log
+     * @return $this
      */
-    public function buildStandardSiteConfiguration();
+    public function setLogger(\Psr\Log\LoggerInterface $log);
 
     /**
-     * Build configuration from path and files
-     *
-     * @param $paths
-     * @param $files
+     * @param $directories
+     * @return $this
      */
-    public function buildConfiguration($paths, $files);
+    public function setFileDirectories($directories);
+
+    /**
+     * @param $filenames
+     * @return $this
+     */
+    public function setFileNames($filenames);
+
+    /**
+     * @return bool
+     */
+    public function loadConfiguration();
+
+    /**
+     * @param $configurationFile
+     * @return bool
+     */
+    public function pushConfigurationFile($configurationFile);
+
 }

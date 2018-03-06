@@ -39,4 +39,30 @@ interface BundleInterface
      * @return string
      */
     public function getNamespace();
+
+    /**
+     * @return null|InputManagerInterface
+     */
+    public function getInputManager();
+
+    /**
+     * @return null|ConfigurationManagerInterface
+     */
+    public function getConfigurationManager();
+
+    /**
+     * @return null|DataSourceDriverInterface
+     */
+    public function getDatabaseProvider();
+
+    /**
+     * @return mixed
+     */
+    public function getSessionHandler();
+
+    /**
+     * @return mixed
+     */
+    public function getCacheProvider();
+
 }
