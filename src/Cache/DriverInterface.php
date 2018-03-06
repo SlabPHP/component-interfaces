@@ -45,9 +45,9 @@ interface DriverInterface
     /**
      * Get a provider's interface, if available
      *
-     * @return mixed
+     * @return ProviderInterface
      */
-    public function getInterface();
+    public function getProvider();
 
     /**
      * Do a cache request
