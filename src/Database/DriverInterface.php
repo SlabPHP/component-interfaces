@@ -6,9 +6,9 @@
  * @subpackage Components
  * @author Eric
  */
-namespace Slab\Components;
+namespace Slab\Components\Database;
 
-interface DataSourceDriverInterface
+interface DriverInterface
 {
     /**
      * Run an SQL query
@@ -16,6 +16,7 @@ interface DataSourceDriverInterface
      * @param string $sql
      * @param string[] $binders
      * @param string $suggestedClass
+     * @param bool $debug
      *
      * @return mixed
      */
@@ -48,6 +49,7 @@ interface DataSourceDriverInterface
      * @param string $table
      * @param array $data
      * @param string $where
+     * @param int|null $limit
      *
      * @return mixed
      */

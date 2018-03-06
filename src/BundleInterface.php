@@ -51,7 +51,7 @@ interface BundleInterface
     public function getConfigurationManager();
 
     /**
-     * @return null|DataSourceDriverInterface
+     * @return null|Database\ProviderInterface
      */
     public function getDatabaseProvider();
 
