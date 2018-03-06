@@ -11,11 +11,6 @@ namespace Slab\Components;
 interface BundleInterface
 {
     /**
-     * BundleInterface constructor.
-     */
-    public function __construct($namespace);
-
-    /**
      * @return string
      */
     public function getSourceDirectory();
