@@ -56,12 +56,12 @@ interface BundleInterface
     public function getDatabaseProvider();
 
     /**
-     * @return mixed
+     * @return \SessionHandlerInterface
      */
     public function getSessionHandler();
 
     /**
-     * @return mixed
+     * @return Cache\ProviderInterface
      */
     public function getCacheProvider();
 

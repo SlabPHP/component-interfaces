@@ -6,9 +6,9 @@
  * @subpackage Components
  * @author Eric
  */
-namespace Slab\Components;
+namespace Slab\Components\Cache;
 
-interface CacheDriverInterface
+interface DriverInterface
 {
     /**
      * Constructor stores a provider instance
