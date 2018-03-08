@@ -41,6 +41,11 @@ interface BundleInterface
     public function getNamespace();
 
     /**
+     * @return \Psr\Log\LoggerInterface|null
+     */
+    public function getLogger();
+
+    /**
      * @return null|InputManagerInterface
      */
     public function getInputManager();
