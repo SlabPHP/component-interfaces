@@ -56,18 +56,27 @@ interface BundleInterface
     public function getConfigurationManager();
 
     /**
+     * @param SystemInterface $system
+     * @return null|Router\RouterInterface
+     */
+    public function getRouter(\Slab\Components\SystemInterface $system);
+
+    /**
+     * @param SystemInterface $system
      * @return null|Database\ProviderInterface
      */
-    public function getDatabaseProvider();
+    public function getDatabaseProvider(\Slab\Components\SystemInterface $system);
 
     /**
+     * @param SystemInterface $system
      * @return \SessionHandlerInterface
      */
-    public function getSessionHandler();
+    public function getSessionHandler(\Slab\Components\SystemInterface $system);
 
     /**
+     * @param SystemInterface $system
      * @return Cache\ProviderInterface
      */
-    public function getCacheProvider();
+    public function getCacheProvider(\Slab\Components\SystemInterface $system);
 
 }
