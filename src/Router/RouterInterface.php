@@ -11,14 +11,10 @@ namespace Slab\Components\Router;
 interface RouterInterface
 {
     /**
-     * Post initialization tasks
-     */
-    public function postInitializationTasks();
-
-    /**
      * Begin the routing of the selected route
      *
+     * @param \Slab\Components\SystemInterface $system
      * @return boolean
      */
-    public function routeRequest();
+    public function routeRequest(\Slab\Components\SystemInterface $system);
 }
