@@ -11,6 +11,14 @@ namespace Slab\Components\Router;
 interface RouterInterface
 {
     /**
+     * Get a route by name
+     *
+     * @param $routeName
+     * @return RouteInterface
+     */
+    public function getRouteByName($routeName);
+
+    /**
      * Begin the routing of the selected route
      *
      * @param \Slab\Components\SystemInterface $system
