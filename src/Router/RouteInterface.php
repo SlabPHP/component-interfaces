@@ -11,12 +11,12 @@ namespace Slab\Components\Router;
 interface RouteInterface
 {
     /**
-     * @return array
+     * @return \stdClass
      */
     public function getParameters();
 
     /**
-     * @return array
+     * @return \stdClass
      */
     public function getValidatedData();
 

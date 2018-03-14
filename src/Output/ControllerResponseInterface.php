@@ -23,5 +23,10 @@ interface ControllerResponseInterface
     /**
      * @return mixed
      */
+    public function getStatusCode();
+
+    /**
+     * @return mixed
+     */
     public function getHeaders();
 }
