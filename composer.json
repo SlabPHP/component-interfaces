@@ -24,7 +24,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Slab\\Components\\": "src/"
+      "Slab\\Components\\": "src/",
+      "Slab\\Tests\\Components\\": "tests/"
     }
   }
 }
