@@ -26,6 +26,11 @@ interface RouteInterface
     public function getName();
 
     /**
+     * @return string
+     */
+    public function getClass();
+
+    /**
      * @param null|array $parameters
      * @return mixed
      */
