@@ -1,15 +1,35 @@
 <?php
-
+/**
+ * Test Mock for a Bundle Class
+ *
+ * @package Slab
+ * @subpackage Tests
+ * @author Eric
+ */
 namespace Slab\Tests\Components\Mocks;
 
 class Bundle implements \Slab\Components\BundleInterface
 {
     /**
+     * @var string
+     */
+    private $sourceDirectory;
+
+    /**
+     * Bundle constructor.
+     * @param $sourceDirectory
+     */
+    public function __construct($sourceDirectory)
+    {
+        $this->sourceDirectory = $sourceDirectory;
+    }
+
+    /**
      * @return string
      */
     public function getSourceDirectory()
     {
-        return __DIR__;
+        return $this->sourceDirectory;
     }
 
     /**
@@ -17,7 +37,7 @@ class Bundle implements \Slab\Components\BundleInterface
      */
     public function getPackageDirectory()
     {
-        return __DIR__;
+        return $this->sourceDirectory;
     }
 
     /**
@@ -25,7 +45,7 @@ class Bundle implements \Slab\Components\BundleInterface
      */
     public function getViewDirectory()
     {
-        return __DIR__ . '/views';
+        return $this->sourceDirectory . '/views';
     }
 
     /**
@@ -33,7 +53,7 @@ class Bundle implements \Slab\Components\BundleInterface
      */
     public function getConfigDirectory()
     {
-        return __DIR__ . '/configs';
+        return $this->sourceDirectory . '/configs';
     }
 
     /**
@@ -41,7 +61,7 @@ class Bundle implements \Slab\Components\BundleInterface
      */
     public function getResourceDirectory()
     {
-        return __DIR__ . '/resources';
+        return $this->sourceDirectory . '/resources';
     }
 
     /**
