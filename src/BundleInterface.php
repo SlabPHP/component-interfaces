@@ -51,9 +51,10 @@ interface BundleInterface
     public function getInputManager();
 
     /**
+     * @param SystemInterface $system
      * @return null|ConfigurationManagerInterface
      */
-    public function getConfigurationManager();
+    public function getConfigurationManager(\Slab\Components\SystemInterface $system);
 
     /**
      * @param SystemInterface $system
