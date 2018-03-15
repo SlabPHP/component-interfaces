@@ -49,4 +49,9 @@ interface SystemInterface
      * @return bool
      */
     public function routeRequest();
+
+    /**
+     * @return BundleStackInterface
+     */
+    public function stack();
 }

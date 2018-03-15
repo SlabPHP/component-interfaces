@@ -71,6 +71,14 @@ class System implements \Slab\Components\SystemInterface
     }
 
     /**
+     * @return null|\Slab\Components\BundleStackInterface
+     */
+    public function stack()
+    {
+        return null;
+    }
+
+    /**
      * @return bool
      */
     public function routeRequest()
