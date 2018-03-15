@@ -22,7 +22,7 @@ interface RouterInterface
      * Begin the routing of the selected route
      *
      * @param \Slab\Components\SystemInterface $system
-     * @return boolean
+     * @return \Slab\Components\Router\RouteInterface
      */
     public function routeRequest(\Slab\Components\SystemInterface $system);
 }
