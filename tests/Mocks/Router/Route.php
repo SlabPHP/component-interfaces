@@ -63,4 +63,12 @@ class Route implements \Slab\Components\Router\RouteInterface
     {
         return '/';
     }
+
+    /**
+     * @return string
+     */
+    public function getClass()
+    {
+        return 'Class';
+    }
 }

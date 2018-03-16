@@ -6,7 +6,7 @@
  * @subpackage Tests
  * @author Eric
  */
-namespace Slab\Tests\Components\Mocks;
+namespace Slab\Tests\Components\Mocks\Database;
 
 class Provider implements \Slab\Components\Database\ProviderInterface
 {

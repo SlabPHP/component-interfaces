@@ -6,7 +6,7 @@
  * @subpackage Tests
  * @author Eric
  */
-namespace Slab\Tests\Components\Mocks;
+namespace Slab\Tests\Components\Mocks\Database;
 
 class Driver implements \Slab\Components\Database\DriverInterface
 {
