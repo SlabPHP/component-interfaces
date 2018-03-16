@@ -20,4 +20,19 @@ interface BenchmarkInterface
      * @return mixed
      */
     public function end();
+
+    /**
+     * @return int
+     */
+    public function getMemoryUsage();
+
+    /**
+     * @return int
+     */
+    public function getMemoryUsageReal();
+
+    /**
+     * @return float
+     */
+    public function getElapsedTime();
 }

@@ -12,30 +12,30 @@ interface ManagerInterface
 {
     /**
      * @param $name
-     * @return mixed
+     * @return $this
      */
     public function startBenchMark($name);
 
     /**
      * @param $name
-     * @return mixed
+     * @return $this
      */
     public function endBenchmark($name);
 
     /**
-     * @return mixed
+     * @return BenchmarkInterface[]
      */
     public function getBenchmarks();
 
     /**
      * @param $message
      * @param null $context
-     * @return mixed
+     * @return $this
      */
     public function addMessage($message, $context = null);
 
     /**
-     * @return mixed
+     * @return MessageInterface[]
      */
     public function getMessages();
 }

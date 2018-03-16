@@ -21,5 +21,5 @@ interface MessageInterface
      * @param $timestampRelative
      * @return mixed
      */
-    public function getMessage($timestampRelative);
+    public function formatMessage($timestampRelative = null);
 }
