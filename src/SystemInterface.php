@@ -54,4 +54,9 @@ interface SystemInterface
      * @return BundleStackInterface
      */
     public function stack();
+
+    /**
+     * @return \Slab\Components\Debug\ManagerInterface
+     */
+    public function debug();
 }

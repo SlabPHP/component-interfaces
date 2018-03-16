@@ -85,4 +85,12 @@ class System implements \Slab\Components\SystemInterface
     {
         return true;
     }
+
+    /**
+     * @return null|\Slab\Components\Debug\ManagerInterface
+     */
+    public function debug()
+    {
+        return null;
+    }
 }
