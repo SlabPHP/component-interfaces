@@ -11,15 +11,6 @@ namespace Slab\Tests\Components\Mocks;
 class BundleStack implements \Slab\Components\BundleStackInterface
 {
     /**
-     * BundleStackInterface constructor.
-     * @param \Slab\Components\BundleInterface $mainBundle
-     */
-    public function __construct(\Slab\Components\BundleInterface $mainBundle)
-    {
-
-    }
-
-    /**
      * @param \Slab\Components\BundleInterface $bundle
      * @return $this
      */
