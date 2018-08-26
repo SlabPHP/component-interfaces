@@ -11,12 +11,6 @@ namespace Slab\Components;
 interface BundleStackInterface
 {
     /**
-     * BundleStackInterface constructor.
-     * @param BundleInterface $mainBundle
-     */
-    public function __construct(\Slab\Components\BundleInterface $mainBundle);
-
-    /**
      * @param BundleInterface $bundle
      * @return $this
      */
