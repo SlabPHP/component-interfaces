@@ -1,6 +1,6 @@
 <?php
 /**
- * Route Mock
+ * System Mock
  *
  * @package Slab
  * @subpackage Tests
@@ -11,11 +11,56 @@ namespace Slab\Tests\Components\Mocks;
 class System implements \Slab\Components\SystemInterface
 {
     /**
+     * @var null
+     */
+    private $config = null;
+
+    /**
+     * @var null
+     */
+    private $session = null;
+
+    /**
+     * @var null
+     */
+    private $log = null;
+
+    /**
+     * @var null
+     */
+    private $input = null;
+
+    /**
+     * @var null
+     */
+    private $router = null;
+
+    /**
+     * @var null
+     */
+    private $db = null;
+
+    /**
+     * @var null
+     */
+    private $cache = null;
+
+    /**
+     * @var null
+     */
+    private $stack = null;
+
+    /**
+     * @var null
+     */
+    private $debug = null;
+
+    /**
      * @return null
      */
     public function config()
     {
-        return null;
+        return $this->config;
     }
 
     /**
@@ -23,7 +68,7 @@ class System implements \Slab\Components\SystemInterface
      */
     public function session()
     {
-        return null;
+        return $this->session;
     }
 
     /**
@@ -31,8 +76,11 @@ class System implements \Slab\Components\SystemInterface
      */
     public function log()
     {
-        $log = new Log();
-        return $log;
+        if (empty($this->log)) {
+            $this->log = new Log();
+        }
+
+        return $this->log;
     }
 
     /**
@@ -40,9 +88,11 @@ class System implements \Slab\Components\SystemInterface
      */
     public function input()
     {
-        $input = new Input();
+        if (empty($this->input)) {
+            $this->input = new Input();
+        }
 
-        return $input;
+        return $this->input;
     }
 
     /**
@@ -50,8 +100,11 @@ class System implements \Slab\Components\SystemInterface
      */
     public function router()
     {
-        $router = new Router\Router();
-        return $router;
+        if (empty($this->router)) {
+            $this->router = new Router\Router();
+        }
+
+        return $this->router;
     }
 
     /**
@@ -59,7 +112,7 @@ class System implements \Slab\Components\SystemInterface
      */
     public function db()
     {
-        return null;
+        return $this->db;
     }
 
     /**
@@ -67,7 +120,7 @@ class System implements \Slab\Components\SystemInterface
      */
     public function cache()
     {
-        return null;
+        return $this->cache;
     }
 
     /**
@@ -75,7 +128,11 @@ class System implements \Slab\Components\SystemInterface
      */
     public function stack()
     {
-        return null;
+        if (empty($this->stack)) {
+            $this->stack = new BundleStack(new Bundle(__DIR__));
+        }
+
+        return $this->stack;
     }
 
     /**
@@ -91,6 +148,6 @@ class System implements \Slab\Components\SystemInterface
      */
     public function debug()
     {
-        return null;
+        return $this->debug;
     }
 }
