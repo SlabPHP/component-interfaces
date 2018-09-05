@@ -28,7 +28,7 @@ class Input implements \Slab\Components\InputManagerInterface
      */
     public function postIsSet($variable)
     {
-        return true;
+        return !empty($_POST[$variable]);
     }
 
     /**
@@ -39,7 +39,7 @@ class Input implements \Slab\Components\InputManagerInterface
      */
     public function server($variable = null)
     {
-        return $_SERVER[$variable];
+        return !empty($_SERVER[$variable]) ? $_SERVER[$variable] : null;
     }
 
     /**
@@ -50,7 +50,7 @@ class Input implements \Slab\Components\InputManagerInterface
      */
     public function file($fileName = null)
     {
-        return $_FILES[$fileName];
+        return !empty($_FILES[$fileName]) ? $_FILES[$fileName] : null;
     }
 
     /**
@@ -61,7 +61,7 @@ class Input implements \Slab\Components\InputManagerInterface
      */
     public function env($variable = null)
     {
-        return $_ENV[$variable];
+        return !empty($_ENV[$variable]) ? $_ENV[$variable] : null;
     }
 
     /**
@@ -72,7 +72,7 @@ class Input implements \Slab\Components\InputManagerInterface
      */
     public function cookie($variable = null)
     {
-        return $_COOKIE[$variable];
+        return !empty($_COOKIE[$variable]) ? $_COOKIE[$variable] : null;
     }
 
     /**
