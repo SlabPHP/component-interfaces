@@ -60,7 +60,22 @@ class System implements \Slab\Components\SystemInterface
      */
     public function config()
     {
+        if (empty($this->config)) {
+            $this->config = new Configuration([]);
+        }
+
         return $this->config;
+    }
+
+    /**
+     * @param \Slab\Components\ConfigurationManagerInterface $config
+     * @return $this
+     */
+    public function injectConfigurationMock(\Slab\Components\ConfigurationManagerInterface $config)
+    {
+        $this->config = $config;
+
+        return $this;
     }
 
     /**
@@ -68,14 +83,18 @@ class System implements \Slab\Components\SystemInterface
      */
     public function session()
     {
+        if (empty($this->session)) {
+            $this->session = new Session([]);
+        }
+
         return $this->session;
     }
 
     /**
-     * @param Session $session
+     * @param \Slab\Components\SessionDriverInterface $session
      * @return $this
      */
-    public function injectSessionMock(Session $session)
+    public function injectSessionMock(\Slab\Components\SessionDriverInterface $session)
     {
         $this->session = $session;
 
@@ -95,6 +114,17 @@ class System implements \Slab\Components\SystemInterface
     }
 
     /**
+     * @param \Psr\Log\LoggerInterface $log
+     * @return $this
+     */
+    public function injectLogMock(\Psr\Log\LoggerInterface $log)
+    {
+        $this->log = $log;
+
+        return $this;
+    }
+
+    /**
      * @return null
      */
     public function input()
@@ -104,6 +134,17 @@ class System implements \Slab\Components\SystemInterface
         }
 
         return $this->input;
+    }
+
+    /**
+     * @param \Slab\Components\InputManagerInterface $input
+     * @return $this
+     */
+    public function injectInputMock(\Slab\Components\InputManagerInterface $input)
+    {
+        $this->input = $input;
+
+        return $this;
     }
 
     /**
@@ -119,11 +160,33 @@ class System implements \Slab\Components\SystemInterface
     }
 
     /**
+     * @param \Slab\Components\Router\RouterInterface $router
+     * @return $this
+     */
+    public function injectRouterMock(\Slab\Components\Router\RouterInterface $router)
+    {
+        $this->router = $router;
+
+        return $this;
+    }
+
+    /**
      * @return null
      */
     public function db()
     {
         return $this->db;
+    }
+
+    /**
+     * @param \Slab\Components\Database\DriverInterface $db
+     * @return $this
+     */
+    public function injectDatabaseMock(\Slab\Components\Database\DriverInterface $db)
+    {
+        $this->db = $db;
+
+        return $this;
     }
 
     /**
@@ -135,15 +198,38 @@ class System implements \Slab\Components\SystemInterface
     }
 
     /**
+     * @param \Slab\Components\Cache\DriverInterface $cache
+     * @return $this
+     */
+    public function injectCacheMock(\Slab\Components\Cache\DriverInterface $cache)
+    {
+        $this->cache = $cache;
+
+        return $this;
+    }
+
+    /**
      * @return null|\Slab\Components\BundleStackInterface
      */
     public function stack()
     {
         if (empty($this->stack)) {
-            $this->stack = new BundleStack(new Bundle(__DIR__));
+            $this->stack = new BundleStack();
+            $this->stack->pushBundle(new Bundle(__DIR__));
         }
 
         return $this->stack;
+    }
+
+    /**
+     * @param \Slab\Components\BundleStackInterface $stack
+     * @return $this
+     */
+    public function injectBundleStackMock(\Slab\Components\BundleStackInterface $stack)
+    {
+        $this->stack = $stack;
+
+        return $this;
     }
 
     /**

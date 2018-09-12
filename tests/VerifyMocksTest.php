@@ -53,5 +53,8 @@ class VerifyMocksTest extends \PHPUnit\Framework\TestCase
 
         $sessionDriver = new Mocks\Session([]);
         $this->assertNotEmpty($sessionDriver);
+
+        $configManager = new Mocks\Configuration([]);
+        $this->assertNotEmpty($configManager);
     }
 }
