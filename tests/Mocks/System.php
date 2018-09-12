@@ -72,6 +72,17 @@ class System implements \Slab\Components\SystemInterface
     }
 
     /**
+     * @param Session $session
+     * @return $this
+     */
+    public function injectSessionMock(Session $session)
+    {
+        $this->session = $session;
+
+        return $this;
+    }
+
+    /**
      * @return null
      */
     public function log()

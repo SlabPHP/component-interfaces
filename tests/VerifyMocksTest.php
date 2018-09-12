@@ -50,5 +50,8 @@ class VerifyMocksTest extends \PHPUnit\Framework\TestCase
 
         $cacheDriver = new Mocks\Cache\Driver('provider');
         $this->assertNotEmpty($cacheDriver);
+
+        $sessionDriver = new Mocks\Session([]);
+        $this->assertNotEmpty($sessionDriver);
     }
 }
