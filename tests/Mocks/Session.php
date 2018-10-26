@@ -32,7 +32,7 @@ class Session implements \Slab\Components\SessionDriverInterface
      */
     public function get($variable)
     {
-        return $this->data[$variable];
+        return !empty($this->data[$variable]) ? $this->data[$variable] : null;
     }
 
     /**
