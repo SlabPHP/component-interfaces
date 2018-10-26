@@ -36,7 +36,14 @@ class Log implements \Psr\Log\LoggerInterface
             return;
         }
 
-        echo PHP_EOL . strtoupper($type) . ': ' . $message . PHP_EOL;
+        echo PHP_EOL . strtoupper($type) . ': ' . $message;
+        if (!empty($context[0]) && (($exception = $context[0]) instanceof \Exception)) {
+            /**
+             * @var \Exception $exception
+             */
+            echo ' ' . $exception->getMessage();
+        }
+        echo PHP_EOL;
     }
 
     /**
